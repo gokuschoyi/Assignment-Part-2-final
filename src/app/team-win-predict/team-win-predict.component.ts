@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from '../models/game.model';
+import { TeamsService } from '../services/teams.service';
 
 @Component({
   selector: 'app-team-win-predict',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamWinPredictComponent implements OnInit {
 
-  constructor() { }
+  constructor(public teamsService: TeamsService) { }
 
   ngOnInit(): void {
   }

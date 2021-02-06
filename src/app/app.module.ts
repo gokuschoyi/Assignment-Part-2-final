@@ -11,6 +11,7 @@ import { OpponentGameComponent } from './opponent-game/opponent-game.component';
 import { VenuesListComponent } from './venues-list/venues-list.component';
 import { AdvanceResultComponent } from './advance-result/advance-result.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
