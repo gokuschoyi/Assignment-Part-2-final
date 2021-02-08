@@ -28,8 +28,8 @@ export class TeamResultsComponent implements OnInit {
   ];
   defaultColDef = {
     sortable: true,
-    filter: true
-};
+    filter: true,
+  };
 
   rowData: Game[] = [];
   constructor(public teamsService: TeamsService) {}
@@ -37,7 +37,7 @@ export class TeamResultsComponent implements OnInit {
   ngOnInit(): void {
     this.teamsService
       .getCentPercentCompleteGames()
-      .subscribe((games: {games: Game[]}) => {
+      .subscribe((games: { games: Game[] }) => {
         const aGames = games.games.filter(
           (game) => game.ateamid === this.teamsService.selectedTeam?.id
         );
